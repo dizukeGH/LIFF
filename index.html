@@ -73,10 +73,10 @@
 
     async function getUserProfile() {
       const profile = await liff.getProfile();
-      document.getElementsById("picture").src = profile.pictureUrl;
+      document.getElementsById("pictureUrl").src = profile.pictureUrl;
       document.getElementsById("userId").append(profile.userId);
       document.getElementsById("statusMessage").append(profile.statusMessage);
-      document.getElementsById("displayName").append(profile.display);
+      document.getElementsById("displayName").append(profile.displayName);
     }
 
     function getEnvironment() {
@@ -103,7 +103,7 @@
       // getFriendship()
       // createUniversalLink()
     }
-    main();
+    main()
   </script>
 </body>
 </html>
