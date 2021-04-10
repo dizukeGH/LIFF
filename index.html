@@ -72,11 +72,11 @@
     }
 
     async function getUserProfile() {
-      const profile = await liff.getProfile();
-      document.getElementsById("pictureUrl").src = profile.pictureUrl;
-      document.getElementsById("userId").append(profile.userId);
-      document.getElementsById("statusMessage").append(profile.statusMessage);
-      document.getElementsById("displayName").append(profile.displayName);
+      const profile = await liff.getProfile()
+      document.getElementsById("pictureUrl").src = profile.pictureUrl
+      document.getElementsById("userId").append(profile.userId)
+      document.getElementsById("statusMessage").append(profile.statusMessage)
+      document.getElementsById("displayName").append(profile.displayName)
     }
 
     function getEnvironment() {
