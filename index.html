@@ -66,19 +66,26 @@
     }
 
     async function sendMsg() {
+      if(liff.getContext.type !== "none"){
+        await liff.sendMsg({
+          "type":"sticker",
+          "stickerId": 1,
+          "packageId": 1
+        })
+      }
     }
 
     function getContext() {
-      document.getElementsById("type").append(liff.getContext().type)
-      document.getElementsById("viewType").append(liff.getContext().viewType)
-      document.getElementsById("utouId").append(liff.getContext().utouId)
-      document.getElementsById("roomId").append(liff.getContext().roomId)
-      document.getElementsById("groupId").append(liff.getContext().groupId)
+      document.getElementsById("type").append(liff.getContext.type)
+      document.getElementsById("viewType").append(liff.getContext.viewType)
+      document.getElementsById("utouId").append(liff.getContext.utouId)
+      document.getElementsById("roomId").append(liff.getContext.roomId)
+      document.getElementsById("groupId").append(liff.getContext.groupId)
     }
 
     async function getUserProfile() {
       const profile = await liff.getProfile()
-      document.getElementsById("pictureUrl").src = profile.pictureUrl
+      document.getElementsById("pictureUrl").src = profile.picpictureUrl
       document.getElementsById("userId").append(profile.userId)
       document.getElementsById("statusMessage").append(profile.statusMessage)
       document.getElementsById("displayName").append(profile.displayName)
